@@ -1,10 +1,14 @@
 name: First workflow
+# on means when we do this, so I decided when people push or merge, it acts automatically
 on: push
+# jobs means what we do, we will do two actions, echo and pwd-ls
 jobs:
+# first job echo will set on ubuntu-latest version and, run echo action 
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Hello,This is GitHub Actions!'
+      - run: echo 'Hello,This is GitHub Actions by taew0n!'
+#Second job pwd-ls will show pwd and ls in ubuntu latest environment. pwd show our working directory and ls list files
   pwd-ls:
     name: PWD & LS
     runs-on: ubuntu-latest
